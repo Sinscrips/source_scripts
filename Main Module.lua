@@ -133,6 +133,7 @@ function esp.new(instance, color, transp)-- Player executes this line
     end)
 	instance.AncestryChanged:connect(function(_, z)
 		if z == nil then
+			print('changed')
 			folder:Destroy()
 		end
 	end)
