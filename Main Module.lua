@@ -1,5 +1,12 @@
 -- main module redo
 
+--[[
+[TO DO]
+- button callback
+- fix old scripts
+
+--]]
+
 -- Sinsane / veryunhappydoge
 
 if getgenv().MainModule then
@@ -124,6 +131,11 @@ function esp.new(instance, color, transp)-- Player executes this line
         	createESP(v, color, folder)
 		end
     end)
+	instance.AncestryChanged:connect(function(_, z)
+		if z == nil then
+			folder:Destroy()
+		end
+	end)
 
     esp.current[folder] = folder
 
