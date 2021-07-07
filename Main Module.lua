@@ -1,9 +1,10 @@
--- main module redo
+-- oh fuck u found my main module (too lazy to obfuscate)
 
 --[[
 [TO DO]
 - button callback
 - fix old scripts
+- draggable gui
 
 --]]
 
@@ -133,7 +134,6 @@ function esp.new(instance, color, transp)-- Player executes this line
     end)
 	instance.AncestryChanged:connect(function(_, z)
 		if z == nil then
-			print('changed')
 			folder:Destroy()
 		end
 	end)
